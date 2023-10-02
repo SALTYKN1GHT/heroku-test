@@ -1,0 +1,30 @@
+<div class="custom-modal" *ngIf="showModal">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title">Sign UP</h5>
+      <input
+        class="form-control"
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Username:"
+        (keyup)="onSearch($event)"
+      />
+      <div>
+        <p>{{ subUserName }}</p>
+      </div>
+      <button type="button" class="close" (click)="closeModal()">
+        &times;
+      </button>
+    </div>
+    <div class="modal-body">
+      <p>Ez itt a modális tartalom.</p>
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-primary" (click)="closeModal()">
+        Bezárás
+      </button>
+    </div>
+  </div>
+</div>
+<div class="overlay" *ngIf="showModal"></div>
